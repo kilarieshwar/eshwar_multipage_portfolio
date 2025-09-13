@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume • Eshwar Reddy Kilari</title>
+  <meta name="description" content="Resume download and inline preview for Eshwar Reddy Kilari"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Optional: small tweaks for the preview box */
+    .resume-preview { margin-top: 18px; }
+    .resume-embed { width: 100%; height: 900px; border: none; }
+    @media (max-width: 780px){
+      .resume-embed { height: 600px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header role="banner">
+    <div class="container header-wrap">
+      <a href="index.html" class="brand">Eshwar Reddy Kilari</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="projects.html">📁 <span>Projects</span></a>
+        <a href="certifications.html">🎓 <span>Certifications</span></a>
+        <a href="about.html">👤 <span>About</span></a>
+        <a href="experience.html">💼 <span>Experience</span></a>
+        <a href="contact.html">✉️ <span>Contact</span></a>
+        <a href="resume.html" class="active">📄 <span>Resume</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container" role="main">
+    <section>
+      <h1 data-reveal>Resume</h1>
+
+      <!-- Buttons (always visible) -->
+      <div class="card" data-reveal>
+        <p class="subtitle">Open or download my latest resume (PDF).</p>
+        <div class="row">
+          <a class="btn" href="assets/Eshwar_Reddy_Kilari_Resume.pdf" target="_blank" rel="noopener">📄 Open Resume</a>
+          <a class="btn" href="assets/Eshwar_Reddy_Kilari_Resume.pdf" download>⬇️ Download PDF</a>
+        </div>
+      </div>
+
+      <!-- Inline preview with robust fallback -->
+      <div class="card resume-preview" data-reveal>
+        <h2>Resume Preview</h2>
+
+        <!-- Try <object> first (most compatible) -->
+        <object
+          data="assets/Eshwar_Reddy_Kilari_Resume.pdf#view=FitH"
+          type="application/pdf"
+          class="resume-embed">
+          <!-- Fallback content if PDF can't render in browser -->
+          <p class="subtitle">
+            Your browser can’t display the PDF inline.
+            Use these buttons instead:
+            <a class="btn" href="assets/Eshwar_Reddy_Kilari_Resume.pdf" target="_blank" rel="noopener">Open</a>
+            <a class="btn" href="assets/Eshwar_Reddy_Kilari_Resume.pdf" download>Download</a>
+          </p>
+        </object>
+
+        <!-- Alternative approach (uncomment if you prefer iframe)
+        <iframe
+          src="assets/Eshwar_Reddy_Kilari_Resume.pdf#view=FitH"
+          class="resume-embed"
+          title="Resume Preview"></iframe>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container row" style="justify-content:space-between;">
+      <small>© <span id="year"></span> Eshwar Reddy Kilari</small>
+      <small class="muted">Multi-page • Premium dark theme</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
